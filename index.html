@@ -1,128 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <title>Rythm Trainer</title>
-  <link rel="stylesheet" href="/src/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'self'; form-action 'none'; object-src 'none'">
+  <title>Rhythm Trainer</title>
+  <meta name="description" content="Rhythm Trainer for iPhone: 76 progressive tap-along exercises with real rhythm notation and instant feedback. Master timing, beat by beat.">
+  <link rel="canonical" href="https://rubenreut.github.io/rythm-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rhythm Trainer">
+  <meta property="og:title" content="Rhythm Trainer: Tap &amp; Learn">
+  <meta property="og:description" content="76 progressive tap-along exercises with real rhythm notation and instant feedback. Master timing, beat by beat.">
+  <meta property="og:url" content="https://rubenreut.github.io/rythm-site/">
+  <meta property="og:image" content="https://rubenreut.github.io/rythm-site/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rhythm Trainer app icon next to the words Master timing, beat by beat">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rhythm Trainer: Tap &amp; Learn">
+  <meta name="twitter:description" content="76 progressive tap-along exercises with real rhythm notation and instant feedback.">
+  <meta name="twitter:image" content="https://rubenreut.github.io/rythm-site/og-image.png">
+  <meta name="theme-color" content="#f8f9fb">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Rhythm Trainer",
+    "alternateName": "Rhythm Trainer: Tap & Learn",
+    "operatingSystem": "iOS",
+    "applicationCategory": "EducationalApplication",
+    "description": "76 progressive tap-along rhythm exercises with real notation and instant feedback.",
+    "url": "https://rubenreut.github.io/rythm-site/",
+    "installUrl": "https://apps.apple.com/app/id6761484994",
+    "image": "https://rubenreut.github.io/rythm-site/og-image.png"
+  }
+  </script>
 </head>
 <body>
-  <div id="app">
+  <header class="site-header">
+    <a class="brand" href="./" aria-current="page"><img src="icon-192.png" alt="" width="28" height="28">Rhythm Trainer</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
 
-    <!-- Tutorial Screen -->
-    <div id="screen-tutorial" class="screen">
-      <div class="tutorial-scroll">
-        <header class="app-header">
-          <h1>Rythm Trainer</h1>
-          <p class="subtitle">Learn to sight-read rhythms</p>
-        </header>
-
-        <div class="tutorial-content">
-          <section class="tutorial-section">
-            <h2>How it works</h2>
-            <p>You'll see a rhythm written in music notation. A metronome will play and a cursor moves across the notes. <strong>Tap in time with the notes</strong> &mdash; don't tap during rests.</p>
-          </section>
-
-          <section class="tutorial-section">
-            <h2>Sound before sight</h2>
-            <p>Each rhythm has a spoken "word". Learn the sound first and you'll recognise patterns instantly instead of counting.</p>
-            <div id="tutorial-legend" class="tutorial-legend"></div>
-          </section>
-
-          <section class="tutorial-section">
-            <h2>Rests</h2>
-            <p>Rests mean silence &mdash; <strong>don't tap</strong> during a rest. We say <strong>"shh"</strong> to keep the pulse.</p>
-            <div id="tutorial-rest-legend" class="tutorial-legend"></div>
-          </section>
-
-          <section class="tutorial-section">
-            <h2>Scoring</h2>
-            <div class="tutorial-scoring">
-              <div><span class="dot dot-perfect"></span> <strong>Perfect</strong> &mdash; right on the beat</div>
-              <div><span class="dot dot-great"></span> <strong>Great</strong> &mdash; very close</div>
-              <div><span class="dot dot-good"></span> <strong>Good</strong> &mdash; slightly off</div>
-              <div><span class="dot dot-miss"></span> <strong>Miss</strong> &mdash; too far off or forgotten</div>
-            </div>
-            <p>Score 70% or higher to unlock the next level.</p>
-          </section>
-
-          <section class="tutorial-section">
-            <h2>Tips</h2>
-            <ul class="tutorial-tips">
-              <li>Listen to the 4-beat count-in to feel the tempo</li>
-              <li>Watch the blue cursor &mdash; tap when it reaches a note</li>
-              <li>On desktop you can also press <kbd>Space</kbd></li>
-            </ul>
-          </section>
-        </div>
-
-        <div class="tutorial-actions">
-          <button id="btn-tutorial-start" class="btn btn-primary btn-lg">Let's go!</button>
-        </div>
+  <main>
+    <section class="hero">
+      <img class="app-icon" src="icon-192.png" alt="Rhythm Trainer app icon: a metronome" width="112" height="112">
+      <h1>Rhythm Trainer</h1>
+      <p class="tagline">Master timing, beat by beat.</p>
+      <p class="lede">Tap along to real rhythm notation and get scored on every hit. 76 progressive levels take you from plain quarter notes to rests, dotted notes, ties, triplets and 6/4 time.</p>
+      <div class="hero-actions">
+        <a class="badge" href="https://apps.apple.com/app/id6761484994" rel="noopener"><img src="app-store-badge.svg" alt="Download on the App Store" width="167" height="56"></a>
+        <a class="btn-link secondary" href="play/">Try the web demo</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Level Select Screen -->
-    <div id="screen-levels" class="screen active">
-      <header class="app-header">
-        <div class="header-row">
-          <h1>Rythm Trainer</h1>
-          <button id="btn-help" class="btn-icon btn-help" aria-label="Help">?</button>
-        </div>
-        <p class="subtitle">Learn to read rhythms</p>
-      </header>
-      <div class="settings-row">
-        <label class="toggle-label">
-          <input type="checkbox" id="toggle-listen" checked />
-          <span>Listen before playing</span>
-        </label>
-      </div>
-      <div id="level-list" class="level-list"></div>
-    </div>
+    <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">What you get</h2>
+    <ul class="features">
+      <li><strong>76 progressive levels</strong><span>Each level adds one idea: eighth notes, rests, dotted notes, syncopation, ties, triplets, 6/4 time.</span></li>
+      <li><strong>Tap along, get scored</strong><span>A metronome counts you in, then every tap is graded Perfect, Great, Good or Miss. Haptics confirm each hit.</span></li>
+      <li><strong>Read the notation</strong><span>Standard rhythmic notation on screen, so your sight-reading improves with your timing.</span></li>
+      <li><strong>Three-star ratings</strong><span>Earn stars to unlock what comes next, or replay earlier levels for a full three-star run.</span></li>
+      <li><strong>Free practice at any BPM</strong><span>Set your own tempo. Slow it down to learn a pattern, speed it up as you improve.</span></li>
+      <li><strong>No account, no tracking</strong><span>Progress stays on your device. No subscriptions, no ads, no analytics.</span></li>
+    </ul>
 
-    <!-- Game Screen -->
-    <div id="screen-game" class="screen">
-      <div class="game-top">
-        <button id="btn-back" class="btn-icon" aria-label="Back">&#8592;</button>
-        <div id="game-level-name" class="game-title"></div>
-        <div id="bpm-display" class="bpm-badge"></div>
-      </div>
+    <p class="note">The <a href="play/">web demo</a> is an older browser version of the trainer: the same tap-along levels, without free practice, dark mode or haptics. Its progress is saved in your browser only.</p>
+  </main>
 
-      <div class="notation-area">
-        <div id="notation-container"></div>
-        <div id="countdown" class="countdown hidden"></div>
-      </div>
-
-      <div id="game-hint" class="game-hint">Listen first, then it's your turn.</div>
-      <div id="feedback-text" class="feedback-text"></div>
-
-      <div class="tap-zone">
-        <div id="pre-start-buttons" class="pre-start-buttons hidden">
-          <button id="btn-listen" class="btn btn-secondary btn-listen">Listen again</button>
-          <button id="btn-start" class="btn-start">Your turn!</button>
-        </div>
-        <button id="btn-tap" class="btn-tap hidden">TAP</button>
-      </div>
-    </div>
-
-    <!-- Results Screen -->
-    <div id="screen-results" class="screen">
-      <div class="results-card">
-        <h2>Results</h2>
-        <div id="results-stars" class="results-stars"></div>
-        <div id="results-score" class="results-score"></div>
-        <div id="results-breakdown" class="results-breakdown"></div>
-        <div class="results-actions">
-          <button id="btn-retry" class="btn btn-secondary">Retry</button>
-          <button id="btn-next" class="btn btn-primary">Next Level</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <script type="module" src="/src/main.js"></script>
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <a href="./">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://apps.apple.com/app/id6761484994" rel="noopener">App Store</a>
+    </nav>
+    <span>Rhythm Trainer</span>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Rythm Trainer</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Tutorial Screen -->
+    <div id="screen-tutorial" class="screen">
+      <div class="tutorial-scroll">
+        <header class="app-header">
+          <h1>Rythm Trainer</h1>
+          <p class="subtitle">Learn to sight-read rhythms</p>
+        </header>
+
+        <div class="tutorial-content">
+          <section class="tutorial-section">
+            <h2>How it works</h2>
+            <p>You'll see a rhythm written in music notation. A metronome will play and a cursor moves across the notes. <strong>Tap in time with the notes</strong> &mdash; don't tap during rests.</p>
+          </section>
+
+          <section class="tutorial-section">
+            <h2>Sound before sight</h2>
+            <p>Each rhythm has a spoken "word". Learn the sound first and you'll recognise patterns instantly instead of counting.</p>
+            <div id="tutorial-legend" class="tutorial-legend"></div>
+          </section>
+
+          <section class="tutorial-section">
+            <h2>Rests</h2>
+            <p>Rests mean silence &mdash; <strong>don't tap</strong> during a rest. We say <strong>"shh"</strong> to keep the pulse.</p>
+            <div id="tutorial-rest-legend" class="tutorial-legend"></div>
+          </section>
+
+          <section class="tutorial-section">
+            <h2>Scoring</h2>
+            <div class="tutorial-scoring">
+              <div><span class="dot dot-perfect"></span> <strong>Perfect</strong> &mdash; right on the beat</div>
+              <div><span class="dot dot-great"></span> <strong>Great</strong> &mdash; very close</div>
+              <div><span class="dot dot-good"></span> <strong>Good</strong> &mdash; slightly off</div>
+              <div><span class="dot dot-miss"></span> <strong>Miss</strong> &mdash; too far off or forgotten</div>
+            </div>
+            <p>Score 70% or higher to unlock the next level.</p>
+          </section>
+
+          <section class="tutorial-section">
+            <h2>Tips</h2>
+            <ul class="tutorial-tips">
+              <li>Listen to the 4-beat count-in to feel the tempo</li>
+              <li>Watch the blue cursor &mdash; tap when it reaches a note</li>
+              <li>On desktop you can also press <kbd>Space</kbd></li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="tutorial-actions">
+          <button id="btn-tutorial-start" class="btn btn-primary btn-lg">Let's go!</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Level Select Screen -->
+    <div id="screen-levels" class="screen active">
+      <header class="app-header">
+        <div class="header-row">
+          <h1>Rythm Trainer</h1>
+          <button id="btn-help" class="btn-icon btn-help" aria-label="Help">?</button>
+        </div>
+        <p class="subtitle">Learn to read rhythms</p>
+      </header>
+      <div class="settings-row">
+        <label class="toggle-label">
+          <input type="checkbox" id="toggle-listen" checked />
+          <span>Listen before playing</span>
+        </label>
+      </div>
+      <div id="level-list" class="level-list"></div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="screen-game" class="screen">
+      <div class="game-top">
+        <button id="btn-back" class="btn-icon" aria-label="Back">&#8592;</button>
+        <div id="game-level-name" class="game-title"></div>
+        <div id="bpm-display" class="bpm-badge"></div>
+      </div>
+
+      <div class="notation-area">
+        <div id="notation-container"></div>
+        <div id="countdown" class="countdown hidden"></div>
+      </div>
+
+      <div id="game-hint" class="game-hint">Listen first, then it's your turn.</div>
+      <div id="feedback-text" class="feedback-text"></div>
+
+      <div class="tap-zone">
+        <div id="pre-start-buttons" class="pre-start-buttons hidden">
+          <button id="btn-listen" class="btn btn-secondary btn-listen">Listen again</button>
+          <button id="btn-start" class="btn-start">Your turn!</button>
+        </div>
+        <button id="btn-tap" class="btn-tap hidden">TAP</button>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="screen-results" class="screen">
+      <div class="results-card">
+        <h2>Results</h2>
+        <div id="results-stars" class="results-stars"></div>
+        <div id="results-score" class="results-score"></div>
+        <div id="results-breakdown" class="results-breakdown"></div>
+        <div class="results-actions">
+          <button id="btn-retry" class="btn btn-secondary">Retry</button>
+          <button id="btn-next" class="btn btn-primary">Next Level</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
