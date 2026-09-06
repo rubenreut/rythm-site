@@ -1,0 +1,16 @@
+build/
+DerivedData/
+DDsim/
+DDipad/
+DerivedDataDevice/
+.codegraph/
+xcuserdata/
+*.xcuserstate
+node_modules/
+.env
+.env.*
+!.env.example
+!.env.default
+.vercel/
+.DS_Store
+*.xcresult
