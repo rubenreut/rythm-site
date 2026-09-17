@@ -164,6 +164,8 @@ ul { padding-left: 22px; margin: 0 0 16px; }
 
 @media (min-width: 560px) {
   .features { grid-template-columns: 1fr 1fr; }
+  /* Odd card count: stretch the last card so the grid ends flush. */
+  .features li:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 .features li {
